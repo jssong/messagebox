@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			form.form-horizontal(method="post",action="./readMsg/submit")
+				.form-group
+					label.col-sm-2.control-label(for="inputNum") 留言编号
+					.col-sm-10
+						input#inputNum.form-control(type="text",name="msgNum",value="#{msg.num}")
+				.form-group
+					label.col-sm-2.control-label(for="inputKey") 留言秘钥
+					.col-sm-10
+						input#inputNum.form-control(type="text",name="msgNum",value="#{msg.key}")
+				.form-group
+					.col-sm-offset-2.col-sm-10
+						button.btn.btn-default(type="submit") 查询

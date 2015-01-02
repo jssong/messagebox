@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var leaveMsg = require('./routes/leaveMsg');
+var readMsg = require('./routes/readMsg');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', routes);
 app.use('/leaveMsg', leaveMsg);
+app.use('/readMsg',readMsg);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
