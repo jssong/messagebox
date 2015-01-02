@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			form.form-horizontal(method="post",action="./leaveMsg/submit")
+				.form-group
+					.col-sm-12
+						textarea.form-control(name="message")
+				.form-group
+					.col-sm-12
+						button.btn.btn-default(type="submit") 留言
